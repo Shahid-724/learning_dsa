@@ -1,25 +1,14 @@
-def getRelativeRatings(skill, rating, k):
-    import heapq
-    n = len(skill)
-    p = list(enumerate(zip(skill, rating)))
-    p.sort(key=lambda x:x[1][0])
-    res = [0] * n
-    h = []
-    s = 0
-    for i in range(n):
-        si, ri = p[i][1]
-        y = p[i][0]
-        res[y] = s
-        heapq.heappush(h, ri)
-        s += ri
-        if len(h) > k:
-            s = s - heapq.heappop(h)
-    return res
+def matrixStringConversion(X):
+    result = []
+    for i in X:
+        cur = ''
+        for j in i:
+            if j == 0:
+                cur += '.'
+            else:
+                cur += chr(j + 64)
+        result.append(cur)
+    return result
 
-skill = list(map(int, input().split()))
-rating = list(map(int, input().split()))
-k = int(input())
-print(getRelativeRatings(skill, rating, k))
-
-# Time Complexity: O(n logn)
-# Space Complexity: O(n)
+X = [[0, 2, 0, 1], [3, 0, 4, 0], [0, 0, 0, 0]]
+print(matrixStringConversion(X))
