@@ -1,15 +1,20 @@
 # This code takes n integers as input
-# Prints the average of these numbers
+# Prints their cumulative average
 
-# Taking input from the user
-numbers = input('Enter space seperated numbers: ').split()
+# Taking input for n
+n = int(input('How many numbers: '))
+
+# Declaring a list for storing no
+numbers = []
+
+# Reading the input from user
+for i in range(n):
+    numbers.append(int(input('> ')))
 
 # Declaring a variable for sum
 sum = 0
 
-# Calculating the sum
-for i in numbers:
-    sum += int(i)
-
-# Printing the average
-print(f'{(sum / len(numbers)):.2f}')
+# Calculating and printing the average
+for i in range(len(numbers)):
+    sum += numbers[i]
+    print(round(sum / (i + 1), 2))
