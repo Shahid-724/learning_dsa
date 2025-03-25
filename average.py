@@ -1,20 +1,17 @@
-# This code takes n integers as input
-# Prints their cumulative average
+# This code takes two integers as input
+# Prints the sum and average for all no in that range
 
-# Taking input for n
-n = int(input('How many numbers: '))
-
-# Declaring a list for storing no
-numbers = []
-
-# Reading the input from user
-for i in range(n):
-    numbers.append(int(input('> ')))
+# Taking input from the user
+m = int(input('Enter the starting no: '))
+n = int(input('Enter the ending no: '))
 
 # Declaring a variable for sum
 sum = 0
 
-# Calculating and printing the average
-for i in range(len(numbers)):
-    sum += numbers[i]
-    print(round(sum / (i + 1), 2))
+# Calculating the sum
+for i in range(m, n + 1):
+    sum += i
+
+# Printing the output
+print(sum)
+print(sum / (n - m + 1))
