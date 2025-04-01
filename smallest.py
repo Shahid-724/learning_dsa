@@ -1,12 +1,16 @@
-# This code takes a list of integers as input
-# Prints the smallest no from the list
+# This code takes a string as input
+# Prints the char with smallest unicode value
 
 # Taking input from the user
-numbers = input('Enter space seperated no: ').split()
+word = input('Enter a word: ')
 
-# Converting the list elements from strings to ints
-for i in range(len(numbers)):
-    numbers[i] = int(numbers[i])
+# Declaring a variable for smallest char
+smallest = 122
 
-# Printing the smallest number
-print(min(numbers))
+# Checking for the smallest value
+for char in word:
+    if smallest > ord(char):
+        smallest = ord(char)
+
+# Printing the output
+print(chr(smallest))
