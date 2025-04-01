@@ -1,9 +1,9 @@
-# This code takes a number as input
-# Prints three lines with n +s on each line
+# This code takes an integer as input
+# Prints a shape using $s
 
 # Taking input from the user
-n = int(input('Enter the no. of +s on each line: '))
+n = int(input('Enter the size of the shape: '))
 
-# Printing the output
-for i in range(0, 3):
-    print('+ ' * n)
+# Printing the shape
+for i in range(n):
+    print(' ' * (n - i - 1) + '$' * n)
