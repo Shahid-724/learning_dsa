@@ -1,10 +1,13 @@
-# This code takes two integers as input
-# Prints the chars between those two values
+# This code takes three inputs
+# A string and two integers
+# Prints all the chars between those two unicode values from the string
 
 # Taking input from the user
+word = input('Enter a string: ')
 m = int(input('Enter the starting no: '))
 n = int(input('Enter the ending no: '))
 
-# Printing the chars
-for i in range(m, n + 1):
-    print(chr(i))
+# Checking for the chars and printing
+for char in word:
+    if m <= ord(char) <= n:
+        print(char, end=' ')
