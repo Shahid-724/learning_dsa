@@ -1,19 +1,21 @@
 # This code takes a string as input
-# Prints the word that comes first in dictionary order
+# Prints all chars that appear in dictionary order
 
 # Taking input from the user
-sentence = input('Enter a string: ')
+word = input('Enter a word: ')
 
-# Splitting the sentence into words
-words = sentence.split()
+# Declaring a variable for first char
+first_char = word[0]
+last_char = word[0]
 
-# Declaring a variable to hold the first word
-first_word = words[0]
-
-# Checking the list for the first word
-for word in words:
-    if first_word.lower() > word.lower():
-        first_word = word
-
+# Checking for largest and smallest chars
+for char in word:
+    if char == ' ':
+        continue
+    if first_char > char:
+        first_char = char
+    if last_char < char:
+        last_char = char
+    
 # Printing the output
-print(first_word)
+print(first_char, last_char)
