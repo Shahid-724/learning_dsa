@@ -1,17 +1,29 @@
-# This code takes two integers as input
-# Prints the no. of chars with the given unicode
+# This code takes a string as input
+# Prints the no. of uppercase and lowercase chars
+
+# Defining the function
+def count(word):
+
+    # Declaring variable for counting upper and lower
+    count_upper = 0
+    count_lower = 0
+
+    # Counting the chars
+    for char in word:
+        if char.isupper():
+            count_upper += 1
+        elif char.islower():
+            count_lower += 1
+
+    # Returning the counts
+    return count_lower, count_upper
 
 # Taking input from the user
-word = input('Enter a string: ')
-code = int(input('Enter the unicode: '))
+user_word = input('Enter a word: ')
 
-# Declaring a variable for count
-count = 0
+# Calling the function and storing the result
+lower_count, upper_count = count(user_word)
 
-# Counting the chars
-for char in word: 
-    if ord(char) == code:
-        count += 1
-
-# Printing the output
-print(count)
+# Printing the result
+print(upper_count)
+print(lower_count)
