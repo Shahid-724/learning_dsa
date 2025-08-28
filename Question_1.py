@@ -1,10 +1,8 @@
-# Harmonic Progression
+# Displaying an equation
 # Taking input from the user
-n = int(input('Enter the no. of terms in the harmonic progression: '))
-sum = 0
+a = int(input('Enter the value of a: '))
+b = int(input('Enter the value of b: '))
+c = int(input('Enter the value of c: '))
 
-# The logic for the sum
-for i in range(1, n + 1):
-    sum += 1 / i
-
-print(f'The harmonic progression of {n} terms is {sum:.3}') 
+# Displaying the equation
+print(f'{a}x + {b}y = {c}')
